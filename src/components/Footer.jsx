@@ -90,19 +90,28 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="flex flex-col space-y-4">
-            <h3 className="font-display font-bold text-white text-base tracking-wider uppercase">Contact Store</h3>
-            <div className="space-y-3 text-sm text-slate-400">
+            <h3 className="font-display font-bold text-white text-base tracking-wider uppercase">Location & Contact</h3>
+            <div className="space-y-3.5 text-sm text-slate-400">
               <div className="flex items-start gap-2.5">
                 <LucideIcon name="MapPin" size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                <span>G. Floor, Sudha Krishna Complex, Opp. Bus Stand, Balehonnur - 577112</span>
+                <div>
+                  <span className="block text-xs font-bold uppercase text-slate-500 mb-0.5">Location</span>
+                  <span>G. Floor, Sudha Krishna Complex, Opp. Bus Stand, Balehonnur - 577112</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2.5">
-                <LucideIcon name="Phone" size={16} className="text-primary flex-shrink-0" />
-                <a href="tel:9480316968" className="text-slate-300 hover:text-white transition-colors">9480316968</a>
+              <div className="flex items-start gap-2.5">
+                <LucideIcon name="Phone" size={16} className="text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <span className="block text-xs font-bold uppercase text-slate-500 mb-0.5">Call Now</span>
+                  <a href="tel:9480316968" className="text-slate-300 hover:text-white transition-colors font-semibold">+91 94803 16968</a>
+                </div>
               </div>
-              <div className="flex items-center gap-2.5">
-                <LucideIcon name="Mail" size={16} className="text-primary flex-shrink-0" />
-                <a href="mailto:info@superhomeappliances.com" className="text-slate-300 hover:text-white transition-colors">info@superhomeappliances.com</a>
+              <div className="flex items-start gap-2.5">
+                <LucideIcon name="MessageSquare" size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" />
+                <div>
+                  <span className="block text-xs font-bold uppercase text-slate-500 mb-0.5">WhatsApp</span>
+                  <a href="https://wa.me/919480316968" target="_blank" rel="noopener noreferrer" className="text-emerald-450 hover:text-white transition-colors font-semibold">Message Store</a>
+                </div>
               </div>
             </div>
           </div>
@@ -113,7 +122,7 @@ export default function Footer() {
       {/* Bottom Footer Section */}
       <div className="bg-slate-950 py-6 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {currentYear} Super Home Appliances. All Rights Reserved. Balehonnur, Karnataka.</p>
+          <p>Copyright © SUPER HOME APPLIANCES. All Rights Reserved. Balehonnur, Karnataka.</p>
           <div className="flex space-x-6">
             <a href="#home" onClick={(e) => handleLinkClick(e, '#home')} className="hover:text-slate-300 transition-colors">Back to Top</a>
             <span>•</span>

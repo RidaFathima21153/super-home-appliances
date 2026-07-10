@@ -91,6 +91,24 @@ export default function Hero() {
               From high-end smart televisions and washing machines to kitchen chimneys, water purifiers, books, stationery, and everyday household essentials. <strong>SUPER HOME APPLIANCES</strong> is your neighborhood's premier shopping destination.
             </motion.p>
 
+            {/* Feature Badges */}
+            <motion.div 
+              variants={itemVariants}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 max-w-xl"
+            >
+              {[
+                "Trusted Local Business",
+                "Quality Products",
+                "Best Customer Service",
+                "Everything For Your Home Under One Roof"
+              ].map((badgeText, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-sm font-bold text-slate-700">
+                  <span className="text-amber-500 text-base">⭐</span>
+                  <span>{badgeText}</span>
+                </div>
+              ))}
+            </motion.div>
+
             {/* CTAs */}
             <motion.div 
               variants={itemVariants}

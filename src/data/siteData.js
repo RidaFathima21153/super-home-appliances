@@ -63,8 +63,8 @@ export const categories = [
     iconColor: "text-orange-600"
   },
   {
-    id: "mixers-grinders",
-    title: "Mixers & Grinders",
+    id: "mixer-grinders",
+    title: "Mixer Grinders",
     description: "Heavy-duty mixer grinders, wet grinders, and juicers with powerful motors.",
     iconName: "ChefHat",
     count: "35+ Models",
@@ -77,7 +77,7 @@ export const categories = [
     description: "High-speed ceiling, pedestal, wall-mount, and table fans for every room.",
     iconName: "Fan",
     count: "40+ Models",
-    gradient: "from-emerald-500/10 to-teal-500/10 hover:from-emerald-500/20 hover:to-teal-500/20",
+    gradient: "from-emerald-500/10 to-teal-500/10 hover:from-emerald-500/20 hover:to-emerald-500/20",
     iconColor: "text-emerald-600"
   },
   {
@@ -86,7 +86,7 @@ export const categories = [
     description: "Ovens, toasters, electric kettles, rice cookers, and induction cooktops.",
     iconName: "Utensils",
     count: "50+ Models",
-    gradient: "from-rose-500/10 to-orange-500/10 hover:from-rose-500/20 hover:to-orange-500/20",
+    gradient: "from-rose-500/10 to-orange-500/10 hover:from-rose-500/20 hover:to-rose-500/20",
     iconColor: "text-rose-600"
   },
   {
@@ -122,8 +122,17 @@ export const categories = [
     description: "Daily household items, plasticware, organizers, and everyday store essentials.",
     iconName: "ShoppingBag",
     count: "150+ Items",
-    gradient: "from-pink-500/10 to-rose-500/10 hover:from-pink-500/20 hover:to-rose-500/20",
+    gradient: "from-pink-500/10 to-rose-500/10 hover:from-pink-500/20 hover:to-pink-500/20",
     iconColor: "text-pink-600"
+  },
+  {
+    id: "other-household-products",
+    title: "Other Household Products",
+    description: "General retail goods, cleaning items, storage utilities, and general everyday essentials.",
+    iconName: "Home",
+    count: "100+ Items",
+    gradient: "from-teal-500/10 to-emerald-500/10 hover:from-teal-500/20 hover:to-emerald-500/20",
+    iconColor: "text-teal-600"
   }
 ];
 
@@ -185,12 +194,7 @@ export const whyChooseUs = [
     iconName: "ShieldCheck"
   },
   {
-    title: "Wide Variety of Products",
-    description: "From electronics and appliances to textbooks, stationary, and house essentials under a single roof.",
-    iconName: "Grid"
-  },
-  {
-    title: "Genuine Brands",
+    title: "Genuine Products",
     description: "Authorized retail dealer for world-renowned brands. Rest assured with authentic product warranties.",
     iconName: "Award"
   },
@@ -200,22 +204,27 @@ export const whyChooseUs = [
     iconName: "Tag"
   },
   {
-    title: "Friendly Customer Service",
+    title: "Friendly Customer Support",
     description: "Experienced store staff to welcome you and assist in choosing products suited for your exact needs.",
     iconName: "HeartHandshake"
   },
   {
-    title: "Installation Assistance",
-    description: "Complete hands-on assistance to hook up your new washing machines, televisions, and purifiers.",
+    title: "Home Delivery",
+    description: "Safe, rapid delivery directly to your home within Balehonnur and surrounding regions.",
+    iconName: "Truck"
+  },
+  {
+    title: "Installation Guidance",
+    description: "Complete hands-on assistance and technical coordination to set up your washing machines, TVs, and purifiers.",
     iconName: "Wrench"
   },
   {
-    title: "Product Guidance",
-    description: "In-depth consultations detailing features, power consumption, and sizes to make the perfect purchase.",
-    iconName: "Info"
+    title: "Wide Variety of Products",
+    description: "From electronics and appliances to textbooks, stationary, and house essentials under a single roof.",
+    iconName: "Grid"
   },
   {
-    title: "One-Stop Shopping Destination",
+    title: "One Stop Shopping Destination",
     description: "No need to visit multiple outlets. Get your kitchen gear, home entertainment, and child's school needs together.",
     iconName: "Store"
   }

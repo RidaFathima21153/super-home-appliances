@@ -162,36 +162,18 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Premium Google Map Mockup */}
-            <div 
-              onClick={handleOpenMap}
-              className="group relative rounded-3xl overflow-hidden border border-gray-200 shadow-2xs hover:shadow-md cursor-pointer aspect-video bg-slate-100 flex flex-col justify-end p-6"
-            >
-              {/* Dummy Map Visual Graphic */}
-              <div className="absolute inset-0 bg-sky-100/60 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                {/* Simplified layout visual representing map streets */}
-                <svg className="w-full h-full text-sky-200/50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 40h500M0 120h500M0 200h500M120 0v300M280 0v300" stroke="currentColor" strokeWidth="6" />
-                  <path d="M0 80l500 150M500 80L0 230" stroke="currentColor" strokeWidth="4" />
-                  <circle cx="280" cy="120" r="16" fill="#F59E0B" className="animate-bounce" />
-                  <circle cx="280" cy="120" r="8" fill="#1E3A8A" />
-                </svg>
-              </div>
-
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10"></div>
-              
-              <div className="relative z-20 text-white flex flex-col items-start gap-1">
-                <span className="text-[10px] uppercase font-bold tracking-widest text-accent">Map Location</span>
-                <h4 className="font-display font-extrabold text-base">Directly Opp. Bus Stand</h4>
-                <p className="text-xs text-white/70">Sudha Krishna Complex, Balehonnur</p>
-                
-                <button
-                  className="mt-3 flex items-center gap-1.5 bg-white text-secondary group-hover:bg-primary group-hover:text-white px-4 py-2 rounded-full font-sans text-xs font-bold transition-all shadow-xs"
-                >
-                  <LucideIcon name="MapPin" size={12} />
-                  <span>Open Directions</span>
-                </button>
-              </div>
+            {/* Google Map Embedded Placeholder */}
+            <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
+              <iframe
+                title="Super Home Appliances Showroom Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.5218413726915!2d75.46781747585093!3d13.435555604473859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb42023d6a3ab1%3A0xaad5723b723f5b72!2sSudha%20Krishna%20Complex!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
           </div>
@@ -260,43 +242,24 @@ export default function ContactSection() {
 
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      
-                      {/* Email */}
-                      <div className="flex flex-col gap-1.5">
-                        <label htmlFor="email" className="font-sans text-xs font-bold text-slate-600 uppercase tracking-wider">
-                          Email (Optional)
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all"
-                          placeholder="email@example.com"
-                        />
-                      </div>
-
-                      {/* Inquiry Type */}
-                      <div className="flex flex-col gap-1.5">
-                        <label htmlFor="inquiryType" className="font-sans text-xs font-bold text-slate-600 uppercase tracking-wider">
-                          What are you looking for?
-                        </label>
-                        <select
-                          id="inquiryType"
-                          name="inquiryType"
-                          value={formData.inquiryType}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-slate-700 cursor-pointer"
-                        >
-                          {inquiryOptions.map((option, idx) => (
-                            <option key={idx} value={option}>{option}</option>
-                          ))}
-                        </select>
-                      </div>
-
+                    {/* Inquiry Type */}
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor="inquiryType" className="font-sans text-xs font-bold text-slate-600 uppercase tracking-wider">
+                        What are you looking for?
+                      </label>
+                      <select
+                        id="inquiryType"
+                        name="inquiryType"
+                        value={formData.inquiryType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-slate-700 cursor-pointer"
+                      >
+                        {inquiryOptions.map((option, idx) => (
+                          <option key={idx} value={option}>{option}</option>
+                        ))}
+                      </select>
                     </div>
+
 
                     {/* Message */}
                     <div className="flex flex-col gap-1.5">
