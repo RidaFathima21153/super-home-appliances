@@ -163,17 +163,28 @@ export default function ContactSection() {
             </div>
 
             {/* Google Map Embedded Placeholder */}
-            <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
-              <iframe
-                title="Super Home Appliances Showroom Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.5218413726915!2d75.46781747585093!3d13.435555604473859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb42023d6a3ab1%3A0xaad5723b723f5b72!2sSudha%20Krishna%20Complex!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div className="flex flex-col gap-4">
+              <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
+                <iframe
+                  title="Super Home Appliances Showroom Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.5218413726915!2d75.46781747585093!3d13.435555604473859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb42023d6a3ab1%3A0xaad5723b723f5b72!2sSudha%20Krishna%20Complex!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Sudha+Krishna+Complex,+Opp.+Bus+Stand,+Balehonnur,+Karnataka+577112"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-50 text-secondary hover:text-primary border border-gray-200 font-sans text-sm font-bold shadow-2xs hover:shadow-xs transition-all duration-300"
+              >
+                <LucideIcon name="MapPin" size={16} className="text-accent" />
+                <span>Calculate Directions from Your Location</span>
+              </a>
             </div>
 
           </div>

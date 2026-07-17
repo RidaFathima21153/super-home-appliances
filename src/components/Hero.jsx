@@ -42,8 +42,8 @@ export default function Hero() {
   };
 
   const handleDirectionsClick = () => {
-    // Exact location Opp. Bus Stand Balehonnur
-    window.open("https://maps.google.com/?q=Super+Home+Appliances+Sudha+Krishna+Complex+Balehonnur", "_blank");
+    // Open in directions mode so Google Maps calculates routes from user's current GPS location
+    window.open("https://www.google.com/maps/dir/?api=1&destination=Sudha+Krishna+Complex,+Opp.+Bus+Stand,+Balehonnur,+Karnataka+577112", "_blank");
   };
 
   return (
