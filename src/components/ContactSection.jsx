@@ -163,17 +163,28 @@ export default function ContactSection() {
             </div>
 
             {/* Google Map Embedded Location */}
-            <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
-              <iframe
-                title="Super Home Appliances Showroom Location"
-                src="https://maps.google.com/maps?q=Sudha%20Krishna%20Complex,%20Opp.%20Bus%20Stand,%20Balehonnur&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div className="flex flex-col gap-4">
+              <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
+                <iframe
+                  title="Super Home Appliances Showroom Location"
+                  src="https://maps.google.com/maps?q=D59F27%2B8PQ%2C+Balehonnur+-+Chikkamagaluru+Rd%2C+Balehonnur%2C+B.Kanbur%2C+Karnataka+577112&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=D59F27%2B8PQ%2C+Balehonnur+-+Chikkamagaluru+Rd%2C+Balehonnur%2C+B.Kanbur%2C+Karnataka+577112"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2.5 w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-50 text-secondary hover:text-primary border border-gray-250 font-sans text-sm font-bold shadow-2xs hover:shadow-xs transition-all duration-300"
+              >
+                <LucideIcon name="MapPin" size={16} className="text-accent" />
+                <span>Get Directions from Your Location</span>
+              </a>
             </div>
 
           </div>

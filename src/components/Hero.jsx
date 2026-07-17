@@ -42,8 +42,8 @@ export default function Hero() {
   };
 
   const handleDirectionsClick = () => {
-    // Open in directions mode so Google Maps calculates routes from user's current GPS location
-    window.open("https://www.google.com/maps/dir/?api=1&destination=Sudha+Krishna+Complex,+Opp.+Bus+Stand,+Balehonnur,+Karnataka+577112", "_blank");
+    // Open in directions mode to calculate route from user's location to the exact Google Plus Code
+    window.open("https://www.google.com/maps/dir/?api=1&destination=D59F27%2B8PQ%2C+Balehonnur+-+Chikkamagaluru+Rd%2C+Balehonnur%2C+B.Kanbur%2C+Karnataka+577112", "_blank");
   };
 
   return (
