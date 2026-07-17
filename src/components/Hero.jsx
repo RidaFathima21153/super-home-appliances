@@ -167,7 +167,7 @@ export default function Hero() {
               
               {/* Showroom mockup picture */}
               <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" 
                 alt="Super Home Appliances Showroom Mockup" 
                 className="w-full h-full object-cover"
               />
