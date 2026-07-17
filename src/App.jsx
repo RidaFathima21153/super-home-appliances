@@ -6,7 +6,6 @@ import ProductCategories from './components/ProductCategories';
 import WhyChooseUs from './components/WhyChooseUs';
 import BrandShowcase from './components/BrandShowcase';
 import Services from './components/Services';
-import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import ContactSection from './components/ContactSection';
@@ -68,9 +67,6 @@ function App() {
 
         {/* Services Showcase */}
         <Services />
-
-        {/* Store Gallery Tour */}
-        <Gallery />
 
         {/* Customer Testimonials */}
         <Testimonials />
