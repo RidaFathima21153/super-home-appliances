@@ -118,10 +118,9 @@ export default function ContactSection() {
                   <div>
                     <span className="block font-bold text-secondary text-sm uppercase tracking-wider mb-1">Our Address</span>
                     <span className="leading-relaxed text-sm block whitespace-pre-line">
-                      9F27+8PQ, Balehonnur - Chikkamagaluru Road,
+                      9F27+8PQ, Balehonnur - Chikkamagaluru Rd,
                       Balehonnur, B.Kanbur,
-                      Chikkamagaluru District,
-                      Karnataka 577112,
+                      Chikkamagaluru, Karnataka 577112,
                       India.
                     </span>
                   </div>
@@ -169,7 +168,7 @@ export default function ContactSection() {
               <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
                 <iframe
                   title="Super Home Appliances Showroom Location"
-                  src="https://maps.google.com/maps?q=9F27%2B8PQ%2C+Balehonnur+-+Chikkamagaluru+Road%2C+Balehonnur%2C+B.Kanbur%2C+Karnataka+577112%2C+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Super%20Home%20Appliances,%209F27%2B8PQ,%20Balehonnur%20-%20Chikkamagaluru%20Rd,%20Balehonnur,%20B.Kanbur,%20Chikkamagaluru,%20Karnataka%20577112,%20India&t=&z=17&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -179,7 +178,7 @@ export default function ContactSection() {
                 ></iframe>
               </div>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=9F27%2B8PQ%2C+Balehonnur+-+Chikkamagaluru+Road%2C+Balehonnur%2C+B.Kanbur%2C+Chikkamagaluru+District%2C+Karnataka+577112%2C+India"
+                href="https://www.google.com/maps/dir/?api=1&destination=Super+Home+Appliances,+9F27%2B8PQ,+Balehonnur+-+Chikkamagaluru+Rd,+Balehonnur,+B.Kanbur,+Chikkamagaluru,+Karnataka+577112,+India"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2.5 w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-slate-50 text-secondary hover:text-primary border border-gray-250 font-sans text-sm font-bold shadow-2xs hover:shadow-xs transition-all duration-300"

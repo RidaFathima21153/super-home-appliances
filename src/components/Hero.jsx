@@ -43,7 +43,7 @@ export default function Hero() {
 
   const handleDirectionsClick = () => {
     // Open in directions mode to calculate route from user's location to the exact Google Plus Code
-    window.open("https://www.google.com/maps/dir/?api=1&destination=9F27%2B8PQ%2C+Balehonnur+-+Chikkamagaluru+Road%2C+Balehonnur%2C+B.Kanbur%2C+Chikkamagaluru+District%2C+Karnataka+577112%2C+India", "_blank");
+    window.open("https://www.google.com/maps/dir/?api=1&destination=Super+Home+Appliances,+9F27%2B8PQ,+Balehonnur+-+Chikkamagaluru+Rd,+Balehonnur,+B.Kanbur,+Chikkamagaluru,+Karnataka+577112,+India", "_blank");
   };
 
   return (
