@@ -96,7 +96,7 @@ export default function Footer() {
                 <LucideIcon name="MapPin" size={18} className="text-primary mt-0.5 flex-shrink-0" />
                 <div>
                   <span className="block text-xs font-bold uppercase text-slate-500 mb-0.5">Location</span>
-                  <span>G. Floor, Sudha Krishna Complex, Opp. Bus Stand, Balehonnur - 577112</span>
+                  <span>9F27+8PQ, Balehonnur - Chikkamagaluru Road,<br />Balehonnur, B.Kanbur, Chikkamagaluru District,<br />Karnataka 577112, India</span>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
