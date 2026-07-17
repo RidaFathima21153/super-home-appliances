@@ -166,7 +166,7 @@ export default function ContactSection() {
             <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-2xs aspect-video bg-slate-100 relative">
               <iframe
                 title="Super Home Appliances Showroom Location"
-                src="https://maps.google.com/maps?q=Super%20Home%20Appliances,%20Sudha%20Krishna%20Complex,%20Opp.%20Bus%20Stand,%20Balehonnur&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Sudha%20Krishna%20Complex,%20Opp.%20Bus%20Stand,%20Balehonnur&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
