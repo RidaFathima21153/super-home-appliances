@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 import LucideIcon from './components/LucideIcon';
 import './App.css';
 
@@ -67,6 +68,9 @@ function App() {
 
         {/* Services Showcase */}
         <Services />
+
+        {/* Showroom Gallery */}
+        {!searchQuery && <Gallery />}
 
         {/* Customer Testimonials */}
         <Testimonials />

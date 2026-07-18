@@ -3,24 +3,22 @@ import { motion } from 'framer-motion';
 export default function Gallery() {
   const galleryItems = [
     {
-      title: "Shop Exterior",
-      description: "Conveniently located at Sudha Krishna Complex opposite the main Bus Stand.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop"
+      title: "Refrigerators Showroom",
+      description: "Double-door, single-door, and smart side-by-side refrigerators from India's top brands.",
+      image: "/showroom_refrigerators.png",
+      tag: "Refrigerators"
     },
     {
-      title: "Shop Interior",
-      description: "Clean, spacious showroom environment for a relaxed browsing experience.",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop"
+      title: "Premium Washing Machines",
+      description: "A wide selection of top-load washing machines and home utility inventory.",
+      image: "/showroom_top_load.png",
+      tag: "Washing Machines"
     },
     {
-      title: "Product Display",
-      description: "A wide catalog of home essentials, books, and household utilities.",
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      title: "Electronics Section",
-      description: "Premium TV, refrigerators, washing machines, and water purifiers display.",
-      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=600&auto=format&fit=crop"
+      title: "Front Loaders & Microwaves",
+      description: "Premium front load washing machines and smart convection microwave ovens.",
+      image: "/showroom_front_load.png",
+      tag: "Home Electronics"
     }
   ];
 
@@ -42,7 +40,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-white relative overflow-hidden">
+    <section id="gallery" className="py-20 bg-slate-50 relative overflow-hidden">
       
       {/* Decorative Blur elements */}
       <div className="absolute top-10 right-0 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
@@ -51,12 +49,15 @@ export default function Gallery() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-secondary">
-            Take a Tour of Our Showroom
+          <span className="font-sans text-xs font-bold text-primary tracking-widest uppercase bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
+            Our Showroom
+          </span>
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-secondary mt-4">
+            Take a Look Inside Our Store
           </h2>
           <div className="w-16 h-1.5 bg-accent mx-auto my-4 rounded-full"></div>
           <p className="font-sans text-slate-650 text-base">
-            Take a virtual look inside Super Home Appliances. We feature a premium space showcasing top brands and household utilities.
+            Take a virtual tour of Super Home Appliances. Visit our showroom in Balehonnur to browse all models in person!
           </p>
         </div>
 
@@ -66,7 +67,7 @@ export default function Gallery() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {galleryItems.map((item, idx) => (
             <motion.div
@@ -74,7 +75,7 @@ export default function Gallery() {
               variants={cardVariants}
               className="group relative h-96 rounded-3xl overflow-hidden border border-gray-150 shadow-2xs hover:shadow-lg transition-all duration-300 bg-slate-50 flex flex-col justify-end"
             >
-              {/* Background Image Placeholder */}
+              {/* Background Image */}
               <img
                 src={item.image}
                 alt={item.title}
@@ -88,9 +89,9 @@ export default function Gallery() {
               <div className="relative z-10 p-6 text-white flex flex-col justify-between h-full">
                 
                 {/* Photo tag label */}
-                <div className="self-end">
+                <div className="self-start">
                   <span className="text-[9px] uppercase font-extrabold tracking-widest bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
-                    Placeholder
+                    {item.tag}
                   </span>
                 </div>
 
@@ -108,11 +109,6 @@ export default function Gallery() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Callout */}
-        <div className="mt-12 text-center text-xs text-slate-500">
-          * Real photographs of our showroom interior, displays, and exterior fronts will be updated here shortly.
-        </div>
 
       </div>
     </section>

@@ -25,6 +25,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
     { name: 'Why Us', href: '#why-choose-us' },
     { name: 'Brands', href: '#brands' },
     { name: 'Services', href: '#services' },
+    { name: 'Showroom', href: '#gallery' },
     { name: 'FAQs', href: '#faqs' },
     { name: 'Contact', href: '#contact' }
   ];

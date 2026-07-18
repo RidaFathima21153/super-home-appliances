@@ -66,6 +66,9 @@ export default function Footer() {
               <li>
                 <a href="#services" onClick={(e) => handleLinkClick(e, '#services')} className="hover:text-white hover:underline transition-all">Services & Help</a>
               </li>
+              <li>
+                <a href="#gallery" onClick={(e) => handleLinkClick(e, '#gallery')} className="hover:text-white hover:underline transition-all">Store Showroom</a>
+              </li>
             </ul>
           </div>
 
