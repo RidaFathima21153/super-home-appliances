@@ -1,16 +1,26 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { categories } from '../data/siteData';
+import { categories, filterCategories } from '../data/siteData';
 import LucideIcon from './LucideIcon';
 
 export default function ProductCategories({ searchQuery }) {
-  // Filter categories based on search input
-  const filteredCategories = categories.filter((cat) => {
-    const query = searchQuery.toLowerCase();
-    return (
-      cat.title.toLowerCase().includes(query) ||
-      cat.description.toLowerCase().includes(query)
-    );
-  });
+  // Filter categories based on search input & rich keywords
+  const filteredCategories = filterCategories(searchQuery);
+
+  // Auto scroll to categories when user types a search query from top of page
+  useEffect(() => {
+    if (searchQuery && searchQuery.trim().length > 0) {
+      const el = document.querySelector('#categories');
+      if (el && window.scrollY < 300) {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = el.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }
+  }, [searchQuery]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

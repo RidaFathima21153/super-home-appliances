@@ -3,6 +3,7 @@ export const categories = [
     id: "televisions",
     title: "Televisions",
     description: "Immersive 4K Smart TVs, QLED, and OLED displays from top global brands.",
+    keywords: ["tv", "tvs", "television", "televisions", "smart tv", "led", "oled", "qled", "4k", "display", "screen", "monitor", "samsung", "lg", "sony"],
     iconName: "Tv",
     count: "40+ Models",
     gradient: "from-blue-500/10 to-indigo-500/10 hover:from-blue-500/20 hover:to-indigo-500/20",
@@ -12,6 +13,7 @@ export const categories = [
     id: "refrigerators",
     title: "Refrigerators",
     description: "Energy-efficient single door, double door, and side-by-side smart fridges.",
+    keywords: ["refrigerator", "refrigerators", "fridge", "fridges", "freezer", "single door", "double door", "side by side", "smart fridge", "godrej", "whirlpool", "lg", "samsung"],
     iconName: "Container",
     count: "30+ Models",
     gradient: "from-sky-500/10 to-blue-500/10 hover:from-sky-500/20 hover:to-blue-500/20",
@@ -21,6 +23,7 @@ export const categories = [
     id: "washing-machines",
     title: "Washing Machines",
     description: "Top load, front load, and semi-automatic washers with smart inverter tech.",
+    keywords: ["washing machine", "washing machines", "washer", "washers", "laundry", "top load", "front load", "semi automatic", "fully automatic", "dryer", "ifb", "whirlpool", "godrej", "lg", "samsung"],
     iconName: "RotateCw",
     count: "25+ Models",
     gradient: "from-indigo-500/10 to-purple-500/10 hover:from-indigo-500/20 hover:to-purple-500/20",
@@ -30,6 +33,7 @@ export const categories = [
     id: "air-conditioners",
     title: "Air Conditioners",
     description: "High-performance split and window ACs with rapid cooling and air purification.",
+    keywords: ["air conditioner", "air conditioners", "ac", "acs", "split ac", "window ac", "cooling", "cooler", "air conditioning", "godrej", "voltas", "blue star", "lg", "panasonic"],
     iconName: "Wind",
     count: "15+ Models",
     gradient: "from-cyan-500/10 to-sky-500/10 hover:from-cyan-500/20 hover:to-sky-500/20",
@@ -39,6 +43,7 @@ export const categories = [
     id: "water-purifiers",
     title: "Water Purifiers",
     description: "Advanced RO + UV + UF purifiers for 100% safe, mineral-rich drinking water.",
+    keywords: ["water purifier", "water purifiers", "water filter", "ro", "uv", "uf", "purifier", "filter", "kent", "aquaguard", "pureit"],
     iconName: "Droplet",
     count: "20+ Models",
     gradient: "from-blue-600/10 to-cyan-600/10 hover:from-blue-600/20 hover:to-cyan-600/20",
@@ -48,6 +53,7 @@ export const categories = [
     id: "chimneys",
     title: "Chimneys",
     description: "Auto-clean kitchen hoods with high suction power and motion sensor control.",
+    keywords: ["chimney", "chimneys", "hood", "kitchen hood", "auto clean", "exhaust", "suction", "prestige", "faber"],
     iconName: "Tornado",
     count: "12+ Models",
     gradient: "from-slate-500/10 to-zinc-500/10 hover:from-slate-500/20 hover:to-zinc-500/20",
@@ -57,6 +63,7 @@ export const categories = [
     id: "gas-stoves",
     title: "Gas Stoves",
     description: "Premium glass top and stainless steel cooktops with high-efficiency brass burners.",
+    keywords: ["gas stove", "gas stoves", "stove", "stoves", "cooktop", "burner", "chulha", "glass top", "stainless steel", "prestige", "sunflame"],
     iconName: "Flame",
     count: "18+ Models",
     gradient: "from-orange-500/10 to-red-500/10 hover:from-orange-500/20 hover:to-red-500/20",
@@ -66,6 +73,7 @@ export const categories = [
     id: "mixer-grinders",
     title: "Mixer Grinders",
     description: "Heavy-duty mixer grinders, wet grinders, and juicers with powerful motors.",
+    keywords: ["mixer grinder", "mixer grinders", "mixer", "grinder", "mixie", "juicer", "wet grinder", "blender", "prestige", "bajaj", "philips"],
     iconName: "ChefHat",
     count: "35+ Models",
     gradient: "from-amber-500/10 to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20",
@@ -75,6 +83,7 @@ export const categories = [
     id: "fans",
     title: "Fans",
     description: "High-speed ceiling, pedestal, wall-mount, and table fans for every room.",
+    keywords: ["fan", "fans", "ceiling fan", "table fan", "pedestal fan", "wall fan", "exhaust fan", "cooler", "crompton", "bajaj", "havells"],
     iconName: "Fan",
     count: "40+ Models",
     gradient: "from-emerald-500/10 to-teal-500/10 hover:from-emerald-500/20 hover:to-emerald-500/20",
@@ -84,6 +93,7 @@ export const categories = [
     id: "kitchen-appliances",
     title: "Kitchen Appliances",
     description: "Ovens, toasters, electric kettles, rice cookers, and induction cooktops.",
+    keywords: ["kitchen appliance", "kitchen appliances", "microwave", "oven", "toaster", "kettle", "electric kettle", "rice cooker", "induction", "cooker"],
     iconName: "Utensils",
     count: "50+ Models",
     gradient: "from-rose-500/10 to-orange-500/10 hover:from-rose-500/20 hover:to-rose-500/20",
@@ -93,6 +103,7 @@ export const categories = [
     id: "small-home-appliances",
     title: "Small Home Appliances",
     description: "Steam irons, vacuum cleaners, emergency lights, and water heaters.",
+    keywords: ["small appliance", "small home appliances", "iron", "steam iron", "vacuum cleaner", "vacuum", "heater", "water heater", "geyser", "emergency light", "plug"],
     iconName: "Plug",
     count: "30+ Models",
     gradient: "from-violet-500/10 to-purple-500/10 hover:from-violet-500/20 hover:to-purple-500/20",
@@ -102,6 +113,7 @@ export const categories = [
     id: "books",
     title: "Books",
     description: "School textbooks, reference guides, general literature, and storybooks.",
+    keywords: ["book", "books", "textbook", "textbooks", "notebook", "notebooks", "guide", "storybook", "novel", "literature", "school book"],
     iconName: "BookOpen",
     count: "1000+ Titles",
     gradient: "from-lime-500/10 to-emerald-500/10 hover:from-lime-500/20 hover:to-emerald-500/20",
@@ -111,6 +123,7 @@ export const categories = [
     id: "stationery",
     title: "Stationery",
     description: "Office supplies, school bags, notebooks, drawing kits, and premium pens.",
+    keywords: ["stationery", "stationary", "pen", "pens", "pencil", "pencils", "school bag", "bag", "drawing", "office", "paper", "eraser", "ruler", "scale"],
     iconName: "Pencil",
     count: "200+ Items",
     gradient: "from-yellow-500/10 to-amber-500/10 hover:from-yellow-500/20 hover:to-amber-500/20",
@@ -120,6 +133,7 @@ export const categories = [
     id: "home-essentials",
     title: "Home Essentials",
     description: "Daily household items, plasticware, organizers, and everyday store essentials.",
+    keywords: ["home essential", "home essentials", "household", "plasticware", "organizer", "container", "bucket", "utility", "daily essential"],
     iconName: "ShoppingBag",
     count: "150+ Items",
     gradient: "from-pink-500/10 to-rose-500/10 hover:from-pink-500/20 hover:to-pink-500/20",
@@ -129,12 +143,35 @@ export const categories = [
     id: "other-household-products",
     title: "Other Household Products",
     description: "General retail goods, cleaning items, storage utilities, and general everyday essentials.",
+    keywords: ["other household products", "household product", "retail", "cleaning", "mop", "broom", "storage", "general store"],
     iconName: "Home",
     count: "100+ Items",
     gradient: "from-teal-500/10 to-emerald-500/10 hover:from-teal-500/20 hover:to-emerald-500/20",
     iconColor: "text-teal-600"
   }
 ];
+
+export const filterCategories = (query) => {
+  if (!query || !query.trim()) return categories;
+  const q = query.toLowerCase().trim();
+  const words = q.split(/\s+/).filter(Boolean);
+
+  return categories.filter((cat) => {
+    const title = cat.title.toLowerCase();
+    const desc = cat.description.toLowerCase();
+    const keywords = cat.keywords ? cat.keywords.map(k => k.toLowerCase()) : [];
+    const id = cat.id.toLowerCase();
+
+    if (title.includes(q) || desc.includes(q) || id.includes(q)) return true;
+    if (keywords.some(k => k.includes(q) || q.includes(k))) return true;
+
+    return words.every(w => 
+      title.includes(w) || 
+      desc.includes(w) || 
+      keywords.some(k => k.includes(w))
+    );
+  });
+};
 
 export const featuredCategories = [
   {

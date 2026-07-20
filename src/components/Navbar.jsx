@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import LucideIcon from './LucideIcon';
+import { filterCategories } from '../data/siteData';
 
 export default function Navbar({ searchQuery, setSearchQuery }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // Filter categories for live dropdown
+  const searchResults = filterCategories(searchQuery);
 
   // Monitor scroll height to make navbar opaque
   useEffect(() => {
@@ -53,6 +57,25 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
     }
   };
 
+  const handleSearchResultSelect = (title) => {
+    setSearchQuery(title);
+    setIsOpen(false);
+    const el = document.querySelector('#categories');
+    if (el) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
+
+  const handleDirectWhatsAppInquiry = (query) => {
+    const message = encodeURIComponent(`Hi Super Home Appliances! I am looking for "${query}" at your Balehonnur store. Is this item currently available in stock?`);
+    window.open(`https://wa.me/919480316968?text=${message}`, '_blank');
+  };
+
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       scrolled 
@@ -90,7 +113,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             ))}
           </div>
 
-          {/* Interactive Search Bar */}
+          {/* Interactive Search Bar (Desktop) */}
           <div className="flex-1 max-w-md hidden md:block relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <LucideIcon name="Search" className="h-4 w-4 text-gray-400" />
@@ -109,6 +132,50 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
               >
                 <LucideIcon name="X" className="h-4 w-4" />
               </button>
+            )}
+
+            {/* Desktop Live Search Dropdown */}
+            {searchQuery.trim().length > 0 && (
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-gray-150 p-3 z-50 max-h-80 overflow-y-auto">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1 mb-1 flex justify-between items-center">
+                  <span>Matching Categories ({searchResults.length})</span>
+                  <button onClick={() => setSearchQuery('')} className="text-primary hover:underline">Clear</button>
+                </div>
+
+                {searchResults.length > 0 ? (
+                  <div className="space-y-1">
+                    {searchResults.slice(0, 5).map((cat) => (
+                      <button
+                        key={cat.id}
+                        onClick={() => handleSearchResultSelect(cat.title)}
+                        className="w-full text-left flex items-center justify-between p-2.5 rounded-xl hover:bg-blue-50 transition-colors group"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className={`p-2 rounded-lg bg-gray-100 group-hover:bg-white text-slate-600 group-hover:${cat.iconColor}`}>
+                            <LucideIcon name={cat.iconName} size={18} />
+                          </div>
+                          <div>
+                            <span className="font-bold text-sm text-secondary group-hover:text-primary block">{cat.title}</span>
+                            <span className="text-xs text-slate-500 line-clamp-1">{cat.description}</span>
+                          </div>
+                        </div>
+                        <span className="text-[10px] font-semibold text-slate-400 bg-gray-100 px-2 py-0.5 rounded-full flex-shrink-0 ml-2">{cat.count}</span>
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="p-4 text-center">
+                    <p className="text-xs text-slate-500 mb-3">No exact category match for "{searchQuery}".</p>
+                    <button
+                      onClick={() => handleDirectWhatsAppInquiry(searchQuery)}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-sans text-xs font-bold shadow-sm"
+                    >
+                      <LucideIcon name="MessageSquare" size={14} />
+                      <span>Ask Us About "{searchQuery}" on WhatsApp</span>
+                    </button>
+                  </div>
+                )}
+              </div>
             )}
           </div>
 
@@ -135,7 +202,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
       </div>
 
       {/* Mobile Search - Visible only on mobile screen widths */}
-      <div className="px-4 py-2 md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md">
+      <div className="px-4 py-2 md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md relative">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <LucideIcon name="Search" className="h-4 w-4 text-gray-400" />
@@ -156,6 +223,50 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             </button>
           )}
         </div>
+
+        {/* Mobile Live Search Dropdown */}
+        {searchQuery.trim().length > 0 && (
+          <div className="mt-2 bg-white rounded-2xl shadow-2xl border border-gray-150 p-3 max-h-72 overflow-y-auto">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1 mb-1 flex justify-between items-center">
+              <span>Matching Categories ({searchResults.length})</span>
+              <button onClick={() => setSearchQuery('')} className="text-primary hover:underline">Clear</button>
+            </div>
+
+            {searchResults.length > 0 ? (
+              <div className="space-y-1">
+                {searchResults.slice(0, 5).map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleSearchResultSelect(cat.title)}
+                    className="w-full text-left flex items-center justify-between p-2.5 rounded-xl hover:bg-blue-50 active:bg-blue-100 transition-colors group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`p-2 rounded-lg bg-gray-100 group-hover:bg-white text-slate-600 group-hover:${cat.iconColor}`}>
+                        <LucideIcon name={cat.iconName} size={18} />
+                      </div>
+                      <div>
+                        <span className="font-bold text-sm text-secondary group-hover:text-primary block">{cat.title}</span>
+                        <span className="text-xs text-slate-500 line-clamp-1">{cat.description}</span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-semibold text-slate-400 bg-gray-100 px-2 py-0.5 rounded-full flex-shrink-0 ml-2">{cat.count}</span>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="p-3 text-center">
+                <p className="text-xs text-slate-500 mb-2.5">No exact category match for "{searchQuery}".</p>
+                <button
+                  onClick={() => handleDirectWhatsAppInquiry(searchQuery)}
+                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-emerald-500 text-white font-sans text-xs font-bold shadow-sm"
+                >
+                  <LucideIcon name="MessageSquare" size={14} />
+                  <span>Ask Us About "{searchQuery}" on WhatsApp</span>
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Mobile Menu Panel */}
