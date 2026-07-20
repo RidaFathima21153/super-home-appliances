@@ -193,7 +193,7 @@ export default function Hero() {
             <motion.div 
               variants={floatingVariants}
               animate="animate"
-              className="absolute -top-6 -left-6 hidden sm:flex items-center gap-3 p-3.5 rounded-2xl glass shadow-lg border border-white/60"
+              className="absolute -top-6 left-2 hidden md:flex items-center gap-3 p-3.5 rounded-2xl glass shadow-lg border border-white/60"
             >
               <div className="p-2.5 rounded-xl bg-blue-500 text-white shadow-md">
                 <LucideIcon name="Tv" size={20} />
@@ -208,7 +208,7 @@ export default function Hero() {
             <motion.div 
               variants={floatingVariants}
               animate="animateReverse"
-              className="absolute bottom-16 -left-10 hidden sm:flex items-center gap-3 p-3.5 rounded-2xl glass shadow-lg border border-white/60"
+              className="absolute bottom-16 left-2 hidden md:flex items-center gap-3 p-3.5 rounded-2xl glass shadow-lg border border-white/60"
             >
               <div className="p-2.5 rounded-xl bg-orange-500 text-white shadow-md">
                 <LucideIcon name="ChefHat" size={20} />
@@ -223,7 +223,7 @@ export default function Hero() {
             <motion.div 
               variants={floatingVariants}
               animate="animate"
-              className="absolute -bottom-6 -right-4 hidden sm:flex items-center gap-3 p-3.5 rounded-2xl glass shadow-lg border border-white/60"
+              className="absolute -bottom-6 right-2 hidden md:flex items-center gap-3 p-3.5 rounded-2xl glass shadow-lg border border-white/60"
             >
               <div className="p-2.5 rounded-xl bg-emerald-600 text-white shadow-md">
                 <LucideIcon name="BookOpen" size={20} />

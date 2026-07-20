@@ -135,7 +135,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
       </div>
 
       {/* Mobile Search - Visible only on mobile screen widths */}
-      <div className="px-4 py-2 md:hidden border-t border-gray-100 bg-white">
+      <div className="px-4 py-2 md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <LucideIcon name="Search" className="h-4 w-4 text-gray-400" />
@@ -145,7 +145,7 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             placeholder="Search categories & essentials..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-8 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full pl-9 pr-8 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary shadow-2xs"
           />
           {searchQuery && (
             <button 
@@ -165,35 +165,37 @@ export default function Navbar({ searchQuery, setSearchQuery }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="lg:hidden overflow-hidden bg-white border-t border-gray-100 shadow-lg"
+            transition={{ duration: 0.25 }}
+            className="lg:hidden overflow-y-auto max-h-[calc(100vh-130px)] bg-white border-t border-gray-100 shadow-2xl"
           >
-            <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+            <div className="px-4 pt-3 pb-6 space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className="block px-3 py-2.5 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-all"
+                  className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-800 hover:text-primary hover:bg-blue-50/60 active:bg-blue-100 transition-all border-b border-gray-50 last:border-none"
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="px-3 py-3 border-t border-gray-100 flex flex-col gap-2">
+              <div className="pt-4 border-t border-gray-100 flex flex-col gap-2.5">
                 <a
                   href="tel:9480316968"
-                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-primary text-white font-sans text-sm font-semibold shadow-sm"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-primary hover:bg-secondary text-white font-sans text-sm font-bold shadow-md transition-all"
                 >
-                  <LucideIcon name="Phone" size={16} />
-                  <span>Call 9480316968</span>
+                  <LucideIcon name="Phone" size={18} />
+                  <span>Call +91 94803 16968</span>
                 </a>
                 <a
                   href="https://wa.me/919480316968"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-emerald-500 text-white font-sans text-sm font-semibold shadow-sm"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-sans text-sm font-bold shadow-md transition-all"
                 >
-                  <LucideIcon name="MessageSquare" size={16} />
+                  <LucideIcon name="MessageSquare" size={18} />
                   <span>WhatsApp Store</span>
                 </a>
               </div>
