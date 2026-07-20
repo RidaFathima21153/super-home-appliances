@@ -74,18 +74,14 @@ export default function ProductCategories({ searchQuery }) {
 
         {/* Categories Cards Grid */}
         {filteredCategories.length > 0 ? (
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+          <div
+            key={searchQuery || 'all'}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {filteredCategories.map((cat) => (
-              <motion.div
+              <div
                 key={cat.id}
-                variants={cardVariants}
-                className={`glass-card p-6 rounded-2xl flex flex-col justify-between h-64 bg-gradient-to-br ${cat.gradient}`}
+                className={`glass-card p-6 rounded-2xl flex flex-col justify-between h-64 bg-gradient-to-br ${cat.gradient} transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}
               >
                 <div>
                   <div className="flex justify-between items-start mb-4">
@@ -120,9 +116,9 @@ export default function ProductCategories({ searchQuery }) {
                     <LucideIcon name="Phone" size={14} />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         ) : (
           <div className="text-center py-16 bg-white border border-gray-200 rounded-3xl shadow-xs max-w-lg mx-auto">
             <div className="p-4 rounded-full bg-slate-50 text-slate-400 inline-block mb-4">
